@@ -175,3 +175,30 @@ const sum = valOne + valTwo;
 
 console.log(sum);
 console.log(typeof sum);
+
+//Numbers & the Math Object
+const numOne = 100;
+const numTwo = 300;
+let newVal;
+
+//simple math
+newVal = numOne + numTwo;
+newVal = numOne * numTwo;
+newVal = numOne - numTwo;
+newVal = numOne / numTwo;
+newVal = numOne % numTwo;
+
+//Math. Object
+newVal = Math.PI;
+newVal= Math.E;
+newVal = Math.round(2.4);
+newVal = Math.ceil(2.4);
+newVal = Math.floor(2.4);
+newVal = Math.sqrt(64);
+newVal = Math.abs(-3);
+newVal = Math.pow(8, 2);
+newVal = Math.min(2, 33, 4, 1, 55, 3, -2);
+newVal = Math.max(2, 33, 4, 1, 55, 3, -2);
+newVal = Math.floor(Math.random() * 20 + 1);
+
+console.log(newVal);
