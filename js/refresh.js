@@ -202,3 +202,62 @@ newVal = Math.max(2, 33, 4, 1, 55, 3, -2);
 newVal = Math.floor(Math.random() * 20 + 1);
 
 console.log(newVal);
+
+//String methods & Concatenation
+const newFirstName = 'William';
+const newLastName = 'Johnson';
+const occupation = 'Software Developer';
+
+let newName;
+newName = newFirstName + newLastName;
+
+//Concatenation
+newName = newFirstName + ' ' + newLastName;
+
+//Append
+newName = 'Anthony';
+newName += 'Villegas';
+
+newName = 'Hello, my name is ' + newFirstName + ' and i am a ' + occupation;
+
+//Escaping
+newName = 'That\'s awesome, I can\'t wait';
+
+//Length
+newName = newLastName.length;
+
+//concat()
+newName = firstName.concat(' ', lastName);
+
+//Change case
+newName = firstName.toUpperCase();
+newName = lastName.toLowerCase();
+
+newName = lastName[2];
+
+//indexOf()
+newName = newLastName.indexOf('h');
+newName = newLastName.lastIndexOf('s');
+
+//charAt()
+newName = newFirstName.charAt(2);
+
+//Get last character
+newName = newFirstName.charAt(newFirstName.length - 1);
+
+//Substring
+newName = newFirstName.substring(0, 4);
+
+//slice()
+newName = newFirstName.slice(0, 4);
+
+//split()
+newName = occupation.split(' ');
+
+//replace()
+newName = occupation.replace('Software', 'Web');
+
+//includes()
+newName = occupation.includes('Hello');
+
+console.log(newName);
