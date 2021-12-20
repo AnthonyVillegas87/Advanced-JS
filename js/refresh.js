@@ -71,3 +71,64 @@ console.log(numbers)
 numbers.push(6);
 console.log(numbers);
 
+//Data Types in JS
+
+//Primitive Data Types (6 all together)
+
+/*
+* Stored directly in the location the variable accesses
+* Stored in the stack
+*
+* String
+* Number
+* Boolean
+* Null
+* Undefined
+* Symbols(ES6)
+*/
+
+const fullName = 'Joe Dirt';
+console.log(typeof fullName);
+
+const age = 22;
+console.log(typeof age);
+
+const hasKids = true;
+console.log(typeof hasKids);
+
+const car = null;
+console.log(typeof car);
+
+let test;
+console.log(typeof test);
+
+const sym = Symbol();
+console.log(typeof sym);
+
+
+
+
+//Reference Data Types
+/*
+* Accessed by reference
+* Objects that are stored on the heap
+* A pointer to a location in memory
+*
+* Arrays
+* Object literals
+* Functions
+* Dates
+*/
+
+const hobbies = ['movies', 'music'];
+console.log(typeof hobbies);
+
+const address = {
+    city: 'Boston',
+    state: 'MA'
+}
+console.log(address)
+
+const today = new Date();
+console.log(today);
+console.log(typeof today);
