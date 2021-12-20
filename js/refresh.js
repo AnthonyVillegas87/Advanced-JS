@@ -295,3 +295,57 @@ html = `
 `;
 
 document.body.innerHTML = html;
+
+//===============================Arrays and array methods
+//Create arrays
+const lottery = [3, 56, 78, 22, 40, 15];
+const luckyNumbers = new Array(34, 87, 2);
+const fruit = ['Apple', 'Banana', 'Orange', 'Pear'];
+const mixed = [88, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];
+let value;
+
+//Get Array length
+value = lottery.length;
+//Check if is array
+value = Array.isArray(lottery);
+//Get single value
+value = lottery[3];
+//Insert into array
+lottery[4] = 100;
+//Find index of value
+value = lottery.indexOf(78);
+//Mutating arrays
+
+//add to end
+lottery.push(250);
+//add to front
+lottery.unshift(120);
+//take from end
+lottery.pop();
+//take from front
+lottery.shift();
+//Splice values
+lottery.splice(1,3)
+//Reverse array
+lottery.reverse()
+
+//Concatenate array
+value = lottery.concat(luckyNumbers);
+
+//Sorting arrays
+value = fruit.sort();
+value = luckyNumbers.sort();
+
+//Compare arrays
+value = luckyNumbers.sort(function(x, y) {
+    return x - y;
+})
+
+//Find
+function under50(num) {
+    return num < 50;
+}
+value = luckyNumbers.find(under50);
+
+console.log(lottery);
+console.log(value)
