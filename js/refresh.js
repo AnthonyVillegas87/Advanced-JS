@@ -3,7 +3,7 @@
 document.write('Hello!');
 document.querySelector('h1').style.color = 'red';
 
-//console
+//===============================console
 // The console object provides access to the browser's debugging console (e.g. the Web console in Firefox).
 // The specifics of how it works varies from browser to browser, but there is a de facto set of features that are typically provided.
 // Log to Console
@@ -36,7 +36,7 @@ console.log("Hello World!");
 
 console.time('Hey!')
 
-//Variables var, let, const & Declaration
+//=========================Variables var, let, const & Declaration
 var name = 'John Doe';
 console.log(name);
 name = 'Steve Smith';
@@ -71,7 +71,7 @@ console.log(numbers)
 numbers.push(6);
 console.log(numbers);
 
-//Data Types in JS
+//=============================================Data Types in JS
 
 //Primitive Data Types (6 all together)
 
@@ -106,7 +106,7 @@ const sym = Symbol();
 console.log(typeof sym);
 
 
-//Reference Data Types
+//=============================Reference Data Types
 /*
 * Accessed by reference
 * Objects that are stored on the heap
@@ -176,7 +176,7 @@ const sum = valOne + valTwo;
 console.log(sum);
 console.log(typeof sum);
 
-//Numbers & the Math Object
+//=======================Numbers & the Math Object
 const numOne = 100;
 const numTwo = 300;
 let newVal;
@@ -203,7 +203,7 @@ newVal = Math.floor(Math.random() * 20 + 1);
 
 console.log(newVal);
 
-//String methods & Concatenation
+//=============================String methods & Concatenation
 const newFirstName = 'William';
 const newLastName = 'Johnson';
 const occupation = 'Software Developer';
@@ -261,3 +261,37 @@ newName = occupation.replace('Software', 'Web');
 newName = occupation.includes('Hello');
 
 console.log(newName);
+
+//=================Template Literals
+const dog = 'German Shepard';
+const dogAge = 4;
+const gender = 'male';
+const city = 'San Antonio';
+let html;
+
+//W/O template strings
+html = '<ul>' +
+        '<li>Dog: ' + dog + '</li>' +
+        '<li>Age: ' + dogAge + ' </li>' +
+        '<li>Gender: ' + gender + ' </li>' +
+        '<li>City: ' + city + '</li>' +
+        '</ul>';
+
+
+
+function hello() {
+    return 'My name is Spot';
+}
+//With template literal
+html = `
+<ul>
+    <li>Dog: ${dog}</li>
+    <li>Age: ${dogAge}</li>
+    <li>Gender: ${gender}</li>
+    <li>City: ${city}</li>
+    <li>${hello()}</li>
+    <li>${dogAge > 6 ? 'I\'m over six': 'I\'m under six'}</li>
+</ul>
+`;
+
+document.body.innerHTML = html;
