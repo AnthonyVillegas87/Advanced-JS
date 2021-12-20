@@ -349,3 +349,35 @@ value = luckyNumbers.find(under50);
 
 console.log(lottery);
 console.log(value)
+
+//=============================== Object literals
+const book = {
+    title: 'IT',
+    author: 'Stephen King',
+    genre: ['horror', 'thriller'],
+    getPublishedYear: function() {
+        return 1987;
+    }
+}
+
+let bookVal;
+ bookVal = book;
+
+ //Retrieve specific value
+bookVal = book.title;
+bookVal = book['author'];
+bookVal = book.genre[1];
+bookVal = book.getPublishedYear();
+
+console.log(bookVal);
+
+const people = [
+    {name: 'John', age: 30},
+    {name: 'Jeff', age: 35},
+    {name: 'Nancy', age: 39}
+]
+
+for(let i = 0; i < people.length; i++) {
+    console.log(people[i]);
+}
+
