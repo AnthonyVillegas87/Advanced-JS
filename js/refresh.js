@@ -36,3 +36,38 @@ console.log("Hello World!");
 
 console.time('Hey!')
 
+//Variables var, let, const & Declaration
+var name = 'John Doe';
+console.log(name);
+name = 'Steve Smith';
+console.log(name);
+
+//Init VAR
+var greeting;
+console.log(greeting);
+greeting = 'Hello';
+console.log(greeting);
+
+// LET
+let firstName;
+firstName = 'Ray';
+console.log(firstName);
+
+// CONST
+const lastName = 'Corona';
+console.log(lastName);
+//CANNOT RE-ASSIGN
+
+const person = {
+    name: 'Joe',
+    age: 33
+}
+console.log(person);
+person.name = 'Sara';
+person.age = 32
+
+const numbers = [1,2,3,4,5];
+console.log(numbers)
+numbers.push(6);
+console.log(numbers);
+
