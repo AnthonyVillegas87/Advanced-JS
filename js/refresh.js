@@ -381,7 +381,7 @@ for(let i = 0; i < people.length; i++) {
     console.log(people[i]);
 }
 
-/// Date & Times
+///===================================================== Date & Times
 let time;
 const todayDate = new Date();
 let birthday = new Date('09-10-1981');
@@ -407,3 +407,77 @@ birthday.setSeconds(25);
 
 console.log(birthday);
 
+//===============================IF STATEMENTS & COMPARISON OPERATORS
+let id = 100;
+
+//EQUAL TO
+if(id == 101) {
+    console.log('CORRECT');
+} else {
+    console.log('INCORRECT')
+}
+
+//NOT EQUAL TO
+if(id != 101) {
+    console.log('CORRECT')
+}else {
+    console.log('INCORRECT')
+}
+
+//EQUAL TO VALUE & TYPE
+if(id === 100) {
+    console.log('CORRECT')
+}else {
+    console.log('INCORRECT')
+}
+
+//NOT EQUAL TO VALUE & TYPE
+if(id !== 100) {
+    console.log('CORRECT');
+}else {
+    console.log('INCORRECT');
+}
+
+if(typeof id !== 'undefined') {
+    console.log(`The id is ${id}`);
+} else {
+    console.log('NO ID');
+}
+
+//GREATER OR LESS THAN
+if(id <= 200) {
+    console.log('CORRECT');
+} else {
+    console.log('INCORRECT');
+}
+
+const color = 'yellow';
+
+if(color === 'red') {
+    console.log('Color is red');
+} else if(color === 'blue') {
+    console.log('Color is blue');
+} else {
+    console.log('Color is not red or blue')
+}
+
+//LOGICAL OPERATOR
+const player = 'Steve';
+const jersey = 20;
+
+if(jersey > 0 && age < 12) {
+    console.log(`${player}'s number is not lucky`);
+} else if(jersey >= 13 && jersey <=19) {
+    console.log(`${player}'s number is lucky`);
+} else {
+    console.log(`${player}'s number doesnt exist`)
+}
+
+//TERNARY OPERATOR
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+
+//WITHOUT BRACES
+if(id === 100)
+    console.log('CORRECT');
+else
+    console.log('INCORRECT')
