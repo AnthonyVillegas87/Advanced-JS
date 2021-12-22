@@ -568,3 +568,5 @@ todo.delete = function(){
 todo.add();
 todo.edit(22);
 todo.delete();
+
+//================================================== GENERAL LOOPS
