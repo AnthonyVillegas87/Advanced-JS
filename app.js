@@ -283,11 +283,11 @@ function onClick(e){
 //     document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`
 // }
 
-const form = document.querySelector('form');
-const taskInput = document.getElementById('task');
-const heading = document.querySelector('h5');
+// const form = document.querySelector('form');
+// const taskInput = document.getElementById('task');
+// const heading = document.querySelector('h5');
 //clear input
-taskInput.value = '';
+// taskInput.value = '';
 
 // form.addEventListener('submit', runEvent);
 
@@ -306,9 +306,9 @@ taskInput.value = '';
 //Paste
  //taskInput.addEventListener('paste', runEvent);
 //Input
-taskInput.addEventListener('input', runEvent);
-function runEvent(e) {
-    console.log(`Event Type: ${e.type}`);
+ //taskInput.addEventListener('input', runEvent);
+// function runEvent(e) {
+//     console.log(`Event Type: ${e.type}`);
 
     // console.log(e.target.value);
 
@@ -316,4 +316,31 @@ function runEvent(e) {
     // console.log(taskInput.value)
     //
     // e.preventDefault();
+// }
+
+//Event bubbling
+// document.querySelector('.card-title').addEventListener('click', function() {
+//     console.log('card-title');
+// });
+//
+// document.querySelector('.card-content').addEventListener('click', function() {
+//     console.log('card-content');
+// });
+//
+// document.querySelector('.card').addEventListener('click', function() {
+//     console.log('card');
+// });
+// document.querySelector('.col').addEventListener('click', function() {
+//     console.log('col');
+// })
+
+//Event delegation
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e) {
+
+    if(e.target.parentElement.classList.contains( 'delete-item') ) {
+        console.log('delete-item');
+        e.target.parentElement.parentElement.remove();
+    }
 }
