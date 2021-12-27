@@ -253,9 +253,9 @@ function onClick(e){
 */
 
 
-const clearBtn = document.querySelector('.clear-tasks');
-const card = document.querySelector('.card');
-const heading = document.querySelector('h5');
+// const clearBtn = document.querySelector('.clear-tasks');
+// const card = document.querySelector('.card');
+// const heading = document.querySelector('h5');
 
 //Click Event
  //clearBtn.addEventListener('click', runEvent);
@@ -275,10 +275,45 @@ const heading = document.querySelector('h5');
 //mouseout
  //card.addEventListener('mouseout', runEvent);
 //mousemove
-card.addEventListener('mousemove', runEvent);
+ //card.addEventListener('mousemove', runEvent);
 //Event Handler
+// function runEvent(e) {
+//     console.log(`Event Type: ${e.type}`);
+//     heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+//     document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`
+// }
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+const heading = document.querySelector('h5');
+//clear input
+taskInput.value = '';
+
+// form.addEventListener('submit', runEvent);
+
+//Keydown
+ //taskInput.addEventListener('keydown', runEvent);
+//Keyup
+ //taskInput.addEventListener('keyup', runEvent);
+//Keypress
+ //taskInput.addEventListener('keypress', runEvent);
+//Focus
+ //taskInput.addEventListener('focus', runEvent);
+//Blur
+ //taskInput.addEventListener('blur', runEvent);
+//Cut
+ //taskInput.addEventListener('cut', runEvent);
+//Paste
+ //taskInput.addEventListener('paste', runEvent);
+//Input
+taskInput.addEventListener('input', runEvent);
 function runEvent(e) {
     console.log(`Event Type: ${e.type}`);
-    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
-    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`
+
+    // console.log(e.target.value);
+
+    // heading.innerText = e.target.value;
+    // console.log(taskInput.value)
+    //
+    // e.preventDefault();
 }
