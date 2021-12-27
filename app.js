@@ -85,7 +85,6 @@ lis.forEach(function(li) {
 })
 
 console.log(lis)
-*/
 
 //document.querySelectorAll()
 
@@ -105,11 +104,49 @@ for(let i = 0; i < liEven.length; i++) {
     liEven[i].style.background = '#f4f4f4';
 }
 
-
-
 console.log(items);
+*/
+
+let val;
+
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+val = listItem;
+val = list;
+
+//Get child nodes
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[0].nodeType;
 
 
+//Get children element nodes
+val = list.children;
+val = list.children[1];
+list.children[1].textContent = ' Hello';
+//Children of children
+val = list.children[3].children[0];
+//firstChild
+val = list.firstChild;
+val = list.firstElementChild;
+//lastChild
+val = list.lastChild;
+val = list.lastElementChild;
+//countChildElements
+val = list.childElementCount;
+//get parent node
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
+//get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling;
+//get previous sibling
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+console.log(val)
 
 
 
