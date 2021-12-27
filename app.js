@@ -222,7 +222,7 @@ val = link.hasAttribute('title');
 link.removeAttribute('title');
 val = link;
 console.log(val)
-*/
+
 
 document.querySelector('.clear-tasks').addEventListener('click', onClick);
 
@@ -249,4 +249,36 @@ function onClick(e){
     val = e.offsetX;
 
     console.log(val)
+}
+*/
+
+
+const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
+
+//Click Event
+ //clearBtn.addEventListener('click', runEvent);
+//Double click Event
+ //clearBtn.addEventListener('dblclick', runEvent);
+
+//Mousedown
+ //clearBtn.addEventListener('mousedown', runEvent);
+//Mouseup
+ //clearBtn.addEventListener('mouseup', runEvent);
+//Mouseenter
+ //clearBtn.addEventListener('mouseenter', runEvent);
+//Mouseleave
+ //clearBtn.addEventListener('mouseover', runEvent);
+//mouseover
+ //card.addEventListener('mouseover', runEvent);
+//mouseout
+ //card.addEventListener('mouseout', runEvent);
+//mousemove
+card.addEventListener('mousemove', runEvent);
+//Event Handler
+function runEvent(e) {
+    console.log(`Event Type: ${e.type}`);
+    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`
 }
