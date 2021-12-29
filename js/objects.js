@@ -79,3 +79,33 @@ const mary = new Person('Mary', 'Joe', '4-18-1980');
 console.log(mary.getFullName());
 mary.getsMarried('Smith');
 console.log(mary.getFullName())
+
+//Prototypal inheritance
+
+Person.prototype.greeting = function() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
+}
+
+const person1 = new Person('Matthew', 'Baker');
+console.log(person1.greeting());
+
+//Customer constructor
+function Customer(firstName, lastName, phone, membership) {
+    Person.call(this, firstName, lastName);
+    this.phone = phone;
+    this.membership = membership;
+}
+
+//Inherit Person prototype methods
+Customer.prototype = Object.create(Person.prototype);
+//Make customer.prototype return customer
+Customer.prototype.constructor = Customer;
+//Create customer
+const customer1 = new Customer('Jay', 'Warnke', '123-123-1233', 'Standard');
+console.log(customer1);
+Customer.prototype.greeting = function() {
+    return `Hello there ${this.firstName} ${this.lastName} welcome to our company!`
+}
+
+console.log(customer1.greeting());
+
