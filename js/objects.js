@@ -136,3 +136,4 @@ const jordan = Object.create(personPrototypes, {
 
 console.log(jordan);
 console.log(jordan.greeting());
+
