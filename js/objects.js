@@ -23,3 +23,27 @@ function Person(name, dob) {
 
 const george = new Person('George', '9-10-1981');
 console.log(george.calculateAge())
+
+//Strings
+const name1 = 'Jeff';
+const name2 = new String('Jeff');
+
+console.log(typeof name2);
+
+//Numbers
+const num1 = 5;
+const num2 = new Number(5);
+console.log(num2);
+
+//Boolean
+const bool = true;
+const bool2 = new Boolean(true);
+console.log(bool2)
+
+//Objects
+const james = {name: 'James'};
+const james1 = new Object({name: "James"});
+
+//Regular Expressions
+const reg1 = /\w+/;
+const reg2 = new RegExp('\\w+');
