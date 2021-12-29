@@ -27,3 +27,20 @@ mary.getsMarried('Thompson');
 console.log(mary);
 
 console.log(Person.addNumbers(1, 3));
+
+class Customer extends Person {
+    constructor(firsName, lastName, phone, membership) {
+        super(firsName, lastName);
+
+        this.phone = phone;
+        this.membership = membership;
+    }
+static  getMembershipCost() {
+        return 500;
+}
+
+}
+
+const john = new Customer('John', 'Doe', '123-123-1234', 'Standard')
+console.log(john.greeting());
+console.log(Customer.getMembershipCost());
