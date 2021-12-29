@@ -6,23 +6,23 @@
 //     }
 
 //Person Constructor
-function Person(name, dob) {
-    this.name = name;
-    //this.age = age;
-    this.birthday = new Date(dob);
-    this.calculateAge = function() {
-      const difference = Date.now() - this.birthday.getTime();
-      const ageDate = new Date(difference);
-      return Math.abs(ageDate.getUTCFullYear() - 1984);
-    }
-    console.log(this);
-}
+//     function Person(name, dob) {
+//         this.name = name;
+//         //this.age = age;
+//         this.birthday = new Date(dob);
+//         this.calculateAge = function() {
+//           const difference = Date.now() - this.birthday.getTime();
+//           const ageDate = new Date(difference);
+//           return Math.abs(ageDate.getUTCFullYear() - 1984);
+//         }
+//         console.log(this);
+//     }
 
 // const joe = new Person('Joe', 33);
 // const john = new Person('John', 50);
 
-const george = new Person('George', '9-10-1981');
-console.log(george.calculateAge())
+    // const george = new Person('George', '9-10-1981');
+    // console.log(george.calculateAge())
 
 //Strings
 const name1 = 'Jeff';
@@ -47,3 +47,35 @@ const james1 = new Object({name: "James"});
 //Regular Expressions
 const reg1 = /\w+/;
 const reg2 = new RegExp('\\w+');
+
+//Object.prototype
+
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    //this.age = age;
+    this.birthday = new Date(dob);
+    // this.calculateAge = function() {
+    //     const difference = Date.now() - this.birthday.getTime();
+    //     const ageDate = new Date(difference);
+    //     return Math.abs(ageDate.getUTCFullYear() - 1984);
+    // }
+    console.log(this);
+}
+
+//Get Full Name
+Person.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+}
+
+//Get married
+Person.prototype.getsMarried = function(newLastName) {
+    this.lastName = newLastName;
+}
+
+const javier = new Person('Javier', 'Ruedas', '8-12-1974');
+const mary = new Person('Mary', 'Joe', '4-18-1980');
+
+console.log(mary.getFullName());
+mary.getsMarried('Smith');
+console.log(mary.getFullName())
