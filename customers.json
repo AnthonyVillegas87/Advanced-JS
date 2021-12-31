@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "company": "X Designs",
+    "phone": "123-123-1234"
+  },
+  {
+    "id": 2,
+    "name": "Jake Ladd",
+    "company": "Amazon",
+    "phone": "121-122-1256"
+  },
+  {
+    "id": 3,
+    "name": "Sara Thompson",
+    "company": "Google",
+    "phone": "111-123-1895"
+  },
+  {
+    "id": 4,
+    "name": "Jason Mccarthy",
+    "company": "Frac Tech",
+    "phone": "210-125-0888"
+  }
+]
