@@ -18,10 +18,30 @@ const data = {
 };
 
 //create new post
-http.post('https://jsonplaceholder.typicode.com/posts', data, function(error, post) {
-    if(error) {
+// http.post('https://jsonplaceholder.typicode.com/posts', data, function(error, post) {
+//     if(error) {
+//          console.log(error);
+//      } else {
+//          console.log(post);
+//      }
+// });
+
+//Update post
+// http.put('https://jsonplaceholder.typicode.com/posts/6', data, function(error, post) {
+//     if(error) {
+//         console.log(error)
+//     } else {
+//         console.log(post)
+//     }
+// })
+
+//Delete post
+
+ http.delete('https://jsonplaceholder.typicode.com/posts/1' ,
+     function(error, response) {
+     if(error) {
          console.log(error);
      } else {
-         console.log(post);
+         console.log(response);
      }
-});
+ });
