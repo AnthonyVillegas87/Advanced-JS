@@ -45,3 +45,40 @@ console.log(valArr);
 //KEYS ONLY
 const keyArr = Array.from(map1.keys());
 console.log(keyArr);
+
+
+//SETS ES6 - STORE UNIQUE VALUES OF ANY TYPE
+ const set1 = new Set();
+
+ //ADD VALUES TO SET
+set1.add(100);
+set1.add('String');
+set1.add({name: 'Joe'});
+set1.add(true);
+
+const set2 = new Set([1, true, 'String']);
+
+console.log(set2)
+
+//CHECK SIZE() OF SET
+console.log(set1.size);
+//CHECK VALUES
+console.log(set1.has(100));
+//DELETE FROM A SET
+set1.delete(100);
+console.log(set1);
+//ITERATE THRU SET
+
+//FOR...OF
+for(let item of set1.entries()) {
+    console.log(item);
+}
+
+//forEach
+set1.forEach((value) => {
+    console.log(value);
+});
+
+//convert to array
+const setArr = Array.from(set1);
+console.log(setArr);
