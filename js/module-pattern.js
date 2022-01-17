@@ -34,26 +34,49 @@
 
 
 //REVEALING MODULE PATTERN
-const ItemCtrl = (function() {
-    let data = [];
+//         const ItemCtrl = (function() {
+//             let data = [];
+//
+//             function add(item) {
+//                data.push(item);
+//                 console.log('Item added....');
+//             }
+//
+//             function get(id) {
+//                 return data.find(item => {
+//                     return item.id === id;
+//                 })
+//             }
+//
+//             return {
+//                 add: add,
+//                 get: get
+//             }
+//         })();
+//
+//         ItemCtrl.add({id:1, name:'Matthew'})
+//         console.log(ItemCtrl.get(1)
+//         );
 
-    function add(item) {
-       data.push(item);
-        console.log('Item added....');
-    }
+//SINGLETON PATTERN
 
-    function get(id) {
-        return data.find(item => {
-            return item.id === id;
-        })
-    }
+const Singleton = (function() {
+   let instance;
 
-    return {
-        add: add,
-        get: get
-    }
+   function createInstance() {
+       const object = new Object('Object Instance!');
+       return object;
+   }
+
+   return {
+       getInstance: function() {
+           if(!instance) {
+               instance = createInstance();
+           }
+           return instance;
+       }
+   }
 })();
 
-ItemCtrl.add({id:1, name:'Matthew'})
-console.log(ItemCtrl.get(1)
-);
+const instanceA = Singleton.getInstance();
+console.log(instanceA);
