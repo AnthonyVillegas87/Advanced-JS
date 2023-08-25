@@ -3,9 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>What is the DOM?</title>
+        <style>
+            h1.heading::before {
+                content: '*';
+            }
+            p::first-line {
+                color: red;
+            }
+            p::after {
+                content: url(data/data.txt);
+            }
+        </style>
     </head>
     <body>
-      <h1>Let's start with hierarchy?</h1>
+      <h1 class="heading">Let's start with hierarchy?</h1>
       <p>Did you know what the default width of an input box is ... 20 characters</p>
     <!--  first form -->
       <form>
